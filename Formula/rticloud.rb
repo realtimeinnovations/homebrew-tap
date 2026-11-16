@@ -5,13 +5,13 @@
 class Rticloud < Formula
   desc "Command-line interface for RTI Connext Cloud"
   homepage "https://github.com/realtimeinnovations/connext-cloud-cli"
-  version "0.5.1"
+  version "0.5.2"
   license "Proprietary"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/realtimeinnovations/connext-cloud-cli/releases/download/v0.5.1/connext-cloud-cli_darwin_amd64.tar.gz"
-      sha256 "26c43f7aeefaacec2d4ef9826eb9704613ca0bd070e4e88e5d22cddd93799734"
+      url "https://github.com/realtimeinnovations/connext-cloud-cli/releases/download/v0.5.2/connext-cloud-cli_darwin_amd64.tar.gz"
+      sha256 "8a73305d5713a10812a415114b35702a0fd9bc862c40b6edb79c1482a3ef9db9"
 
       define_method(:install) do
         bin.install "rticloud"
@@ -19,8 +19,8 @@ class Rticloud < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/realtimeinnovations/connext-cloud-cli/releases/download/v0.5.1/connext-cloud-cli_darwin_arm64.tar.gz"
-      sha256 "21be7d1c623888b75e552dec4dbe6bb77ba974f7b3de108fa19311b282a1d80f"
+      url "https://github.com/realtimeinnovations/connext-cloud-cli/releases/download/v0.5.2/connext-cloud-cli_darwin_arm64.tar.gz"
+      sha256 "8979cc93713ffca5ca8bfce082482cccae095452eec59eb9da1b05857303db0e"
 
       define_method(:install) do
         bin.install "rticloud"
@@ -31,16 +31,16 @@ class Rticloud < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/realtimeinnovations/connext-cloud-cli/releases/download/v0.5.1/connext-cloud-cli_linux_amd64.tar.gz"
-      sha256 "708666841005160518d8f2b9834cd23c97ded066690b94f372a4029f6a78de4e"
+      url "https://github.com/realtimeinnovations/connext-cloud-cli/releases/download/v0.5.2/connext-cloud-cli_linux_amd64.tar.gz"
+      sha256 "1508f0bbb0b22b65eb5b0af36d52682eadc2d2695a87e10979596872e9200c0d"
       define_method(:install) do
         bin.install "rticloud"
         generate_completions_from_executable(bin/"rticloud", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/realtimeinnovations/connext-cloud-cli/releases/download/v0.5.1/connext-cloud-cli_linux_arm64.tar.gz"
-      sha256 "5a887cbef6f3f2e85a81ba643409f389ba72933d10817ccb88beb3da3b199d25"
+      url "https://github.com/realtimeinnovations/connext-cloud-cli/releases/download/v0.5.2/connext-cloud-cli_linux_arm64.tar.gz"
+      sha256 "b483cd2ba26ed391ae42fdf50f8b2e635d4e9014e662a0395365547ed835b6b7"
       define_method(:install) do
         bin.install "rticloud"
         generate_completions_from_executable(bin/"rticloud", "completion")
